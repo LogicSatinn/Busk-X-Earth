@@ -1,27 +1,27 @@
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="robots" content="noindex, nofollow">
-
-    <title>{{config('app.name')}}</title>
-
-    {{-- Favivon --}}
-    <link rel="shortcut icon" href="{{asset('media/favicons/favicon.png')}}">
-
-    {{-- Fonts --}}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700">
-
-    {{-- Main Style --}}
-    <link rel="stylesheet" href="{{asset('/css/app.css')}}">
-    <link rel="stylesheet" id="css-main" href="{{asset('/css/dashmix.css')}}">
-
-    {{-- Page JS Plugins CSS --}}
-    <link rel="stylesheet" href="{{asset('/js/plugins/datatables/dataTables.bootstrap4.css')}}">
-    <link rel="stylesheet" href="{{asset('/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css')}}">
-
-    @stack('css_after')
-
-    {{-- Font Awesome --}}
-    <script src="https://kit.fontawesome.com/f35e8b689e.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{asset('favicon.ico')}}">
+    <title>{{config('app.name')}} - DashBoard</title>
+    <!-- Simple bar CSS -->
+    <link rel="stylesheet" href="{{asset('css/simplebar.css')}}">
+    <!-- Fonts CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="{{asset('css/feather.css')}}">
+    <link rel="stylesheet" href="{{asset('css/select2.css')}}">
+    <link rel="stylesheet" href="{{asset('css/dropzone.css')}}">
+    <link rel="stylesheet" href="{{asset('css/uppy.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/jquery.steps.css')}}">
+    <link rel="stylesheet" href="{{asset('css/jquery.timepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('css/quill.snow.css')}}">
+    <!-- Date Range Picker CSS -->
+    <link rel="stylesheet" href="{{asset('css/daterangepicker.css')}}">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="{{asset('css/app-light.css')}}" id="lightTheme">
+    <link rel="stylesheet" href="{{asset('css/app-dark.css')}}" id="darkTheme" disabled>
 </head>
