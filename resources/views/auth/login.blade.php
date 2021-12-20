@@ -1,73 +1,56 @@
-@extends('layouts.auth')
+<x-guest-layout>
+    <x-auth-card>
+        <x-slot name="logo">
+            <a href="/">
+                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            </a>
+        </x-slot>
 
-@section('content')
-<div class="bg-image" style="background-image: url('{{asset('media/photos/photo22@2x.jpg')}}');">
-    <div class="row no-gutters bg-primary-op">
-        <div class="hero-static col-md-6 d-flex align-items-center bg-white">
-            <div class="p-3 w-100">
-                <div class="mb-3 text-center">
-                    <a class="link-fx font-w700 font-size-h1" href="{{url('/')}}">
-                        @include('layouts.inc.title')
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+
+            <!-- Email Address -->
+            <div>
+                <x-label for="email" :value="__('Email')" />
+
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            </div>
+
+            <!-- Password -->
+            <div class="mt-4">
+                <x-label for="password" :value="__('Password')" />
+
+                <x-input id="password" class="block mt-1 w-full"
+                                type="password"
+                                name="password"
+                                required autocomplete="current-password" />
+            </div>
+
+            <!-- Remember Me -->
+            <div class="block mt-4">
+                <label for="remember_me" class="inline-flex items-center">
+                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                </label>
+            </div>
+
+            <div class="flex items-center justify-end mt-4">
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        {{ __('Forgot your password?') }}
                     </a>
-                    <p class="text-uppercase font-w700 font-size-sm text-grey">Sign In</p>
-                </div>
-                <div class="row no-gutters justify-content-center">
-                    <div class="col-sm-8 col-xl-6">
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <div class="py-3">
-                                <div class="form-group">
-                                    <input id="email" type="email"
-                                        class="form-control form-control-lg form-control-alt @error('email') is-invalid @enderror"
-                                        name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
+                @endif
 
-                                    @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <input id="password" type="password"
-                                        class="form-control form-control-lg form-control-alt @error('password') is-invalid @enderror"
-                                        name="password" required autocomplete="current-password" placeholder="Password">
-
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-block btn-hero-lg btn-hero-primary">
-                                    <i class="fa fa-fw fa-sign-in-alt mr-1"></i> Sign In
-                                </button>
-                                <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
-                                    <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1"
-                                        href="{{ route('password.request') }}">
-                                        <i class="fa fa-exclamation-triangle text-grey mr-1"></i> Forgot
-                                        password
-                                    </a>
-                                </p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <x-button class="ml-3">
+                    {{ __('Log in') }}
+                </x-button>
             </div>
-        </div>
-
-        <div
-            class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center">
-            <div class="p-3">
-                <p class="display-4 font-w700 text-white mb-3">
-                    Welcome to the future
-                </p>
-                <p class="font-size-lg font-w600 text-white-75 mb-0">
-                    Copyright &copy; <span data-toggle="year-copy"></span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+        </form>
+    </x-auth-card>
+</x-guest-layout>
