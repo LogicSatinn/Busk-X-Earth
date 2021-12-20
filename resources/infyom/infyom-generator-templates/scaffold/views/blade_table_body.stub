@@ -1,0 +1,32 @@
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-vcenter js-dataTable-full" id="$MODEL_NAME_PLURAL_CAMEL$-table">
+        <thead>
+        <tr>
+            $FIELD_HEADERS$
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($$MODEL_NAME_PLURAL_CAMEL$ as $$MODEL_NAME_CAMEL$)
+            <tr>
+                $FIELD_BODY$
+                <td width="120">
+                    {!! Form::open(['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.destroy', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$], 'method' => 'delete']) !!}
+                    <div class='btn-group'>
+                        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}"
+                           class='btn btn-primary btn-xs'>
+                            View
+                        </a>
+                        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.edit', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}"
+                           class='btn btn-secondary btn-xs'>
+                            Edit
+                        </a>
+                        {!! Form::button('Delete', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    </div>
+                    {!! Form::close() !!}
+                </td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+</div>
