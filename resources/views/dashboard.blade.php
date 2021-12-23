@@ -1,9 +1,12 @@
-<!doctype html>
-<html lang="en">
-@include('layouts.inc.head')
-<body class="horizontal light  ">
-<div class="wrapper">
-    @include('layouts.inc.nav')
+@extends('layouts.backend')
+
+@section('title')
+
+    DashBoard
+
+@endsection
+
+@section('content')
 
     <main role="main" class="main-content">
         <div class="container-fluid">
@@ -550,7 +553,4 @@
             </div>
         </div>
     </main> <!-- main -->
-</div> <!-- .wrapper -->
-@include('layouts.inc.scripts')
-</body>
-</html>
+@endsection

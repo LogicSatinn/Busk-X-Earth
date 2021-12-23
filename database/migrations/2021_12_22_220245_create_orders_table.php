@@ -15,6 +15,11 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('symbol');
+            $table->integer('from');
+            $table->integer('to');
+            $table->enum('status', ['OPEN', 'REJECTED', 'CANCELED', 'FILLED', 'PART_FILLED', 'EXPIRED']);
+            $table->integer('limit');
             $table->timestamps();
         });
     }

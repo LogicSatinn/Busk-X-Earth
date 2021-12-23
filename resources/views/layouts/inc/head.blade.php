@@ -4,7 +4,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{{asset('favicon.ico')}}">
-    <title>{{config('app.name')}} - DashBoard</title>
+    <title>{{config('app.name')}} | @yield('title')</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="{{asset('css/simplebar.css')}}">
     <!-- Fonts CSS -->
