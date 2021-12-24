@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/dashboard', 'App\Http\Controllers\HomeController@index');
+//    ->middleware(['auth'])->name('dashboard');
+
+Route::get('/diff', 'App\Http\Controllers\HomeController@index');
+
 Route::get('/l2', 'App\Http\Controllers\LevelOrderBookController@l2OrderBook');
 
 Route::get('/l3', 'App\Http\Controllers\LevelOrderBookController@l3OrderBook');

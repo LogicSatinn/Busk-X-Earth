@@ -21,5 +21,18 @@
         </style>
     </head>
     <body class="antialiased">
+    {{$difficulty}}
+    {{$blockcount}}
+    {{$latesthash}}
+    {{$bcperblock}}
+    {{$totalbc}}
+    {{$avgtxnumber}}
+    {{$eta}}
+    {{$interval}}
+    {{$avgtxvalue}}
+    {{$nexttretarget}}
+    {{$avgtxsize}}
+    {{$hashestowin}}
+    {{$probability}}
     </body>
 </html>
