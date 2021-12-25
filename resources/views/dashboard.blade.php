@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <div class="row align-items-center mb-2">
                         <div class="col">
-{{--                            <h2 class="h5 page-title">Welcome, {{auth()->user()->name}} </h2>--}}
+                            <h2 class="h5 page-title">Welcome, {{auth()->user()->name}} </h2>
                         </div>
                         <div class="col-auto">
                             <form class="form-inline">
@@ -33,187 +33,73 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card shadow eq-card  mb-4">
-                                <div class="card-header">
-                                    <strong>Region</strong>
-                                </div>
-                                <div class="card-body">
-                                    <div class="map-box my-5"
-                                         style="position:relative; max-width: 320px; max-height: 200px; margin:0 auto;">
-                                        <div id="dataMapUSA"></div>
-                                    </div>
-                                    <div class="row align-items-bottom my-2">
-                                        <div class="col">
-                                            <p class="mb-0">Level 2 Order Book</p>
-                                            <span class="my-0 text-muted small">+10%</span>
-                                        </div>
-                                        <div class="col-auto text-right">
-                                            <p class="mb-0">118</p>
-                                            <div class="progress mt-2" style="height: 4px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 85%"
-                                                     aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center my-2">
-                                        <div class="col">
-                                            <p class="mb-0">Netherlands</p>
-                                            <span class="my-0 text-muted small">+0.6%</span>
-                                        </div>
-                                        <div class="col-auto text-right">
-                                            <p class="mb-0">1008</p>
-                                            <div class="progress mt-2" style="height: 4px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 85%"
-                                                     aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center my-2">
-                                        <div class="col">
-                                            <p class="mb-0">Level 3 Order Book</p>
-                                            <span class="my-0 text-muted small">+1.6%</span>
-                                        </div>
-                                        <div class="col-auto text-right">
-                                            <p class="mb-0">67</p>
-                                            <div class="progress mt-2" style="height: 4px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 85%"
-                                                     aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center my-2">
-                                        <div class="col">
-                                            <p class="mb-0">Spain</p>
-                                            <span class="my-0 text-muted small">+118%</span>
-                                        </div>
-                                        <div class="col-auto text-right">
-                                            <p class="mb-0">186</p>
-                                            <div class="progress mt-2" style="height: 4px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 85%"
-                                                     aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- .col -->
-                        <div class="col-md-4">
-                            <div class="card shadow eq-card mb-4">
-                                <div class="card-header">
-                                    <strong class="card-title">Traffic</strong>
-                                    <a class="float-right small text-muted" href="#!">View all</a>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-box mb-3" style="min-height:180px;">
-                                        <div id="customAngle"></div>
-                                    </div> <!-- .col -->
-                                    <div class="mx-auto">
-                                        <div class="row align-items-center mb-2">
-                                            <div class="col">
-                                                <p class="mb-0">Direct</p>
-                                                <span class="my-0 text-muted small">+10%</span>
-                                            </div>
-                                            <div class="col-auto text-right">
-                                                <p class="mb-0">218</p>
-                                                <span class="dot dot-md bg-success"></span>
-                                            </div>
-                                        </div>
-                                        <div class="row align-items-center mb-2">
-                                            <div class="col">
-                                                <p class="mb-0">Organic Search</p>
-                                                <span class="my-0 text-muted small">+0.6%</span>
-                                            </div>
-                                            <div class="col-auto text-right">
-                                                <p class="mb-0">1002</p>
-                                                <span class="dot dot-md bg-warning"></span>
-                                            </div>
-                                        </div>
-                                        <div class="row align-items-center mb-2">
-                                            <div class="col">
-                                                <p class="mb-0">Referral</p>
-                                                <span class="my-0 text-muted small">+1.6%</span>
-                                            </div>
-                                            <div class="col-auto text-right">
-                                                <p class="mb-0">67</p>
-                                                <span class="dot dot-md bg-primary"></span>
-                                            </div>
-                                        </div>
-                                        <div class="row align-items-center">
-                                            <div class="col">
-                                                <p class="mb-0">Social</p>
-                                                <span class="my-0 text-muted small">+118%</span>
-                                            </div>
-                                            <div class="col-auto text-right">
-                                                <p class="mb-0">386</p>
-                                                <span class="dot dot-md bg-secondary"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- .card-body -->
-                            </div> <!-- .card -->
-                        </div> <!-- .col-md -->
-                        <div class="col-md-4">
-                            <div class="card shadow eq-card mb-4">
-                                <div class="card-header">
-                                    <strong>Browsers</strong>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-box mt-3 mb-5">
-                                        <div id="radarChartWidget"></div>
-                                    </div> <!-- .col -->
-                                    <div class="mx-auto">
-                                        <div class="row align-items-center my-2">
-                                            <div class="col-6 col-xl-3 my-3">
-                                                <span class="mb-0">Safari</span>
-                                                <div class="progress my-2" style="height: 4px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 10%"
-                                                         aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-xl-3 my-3 text-right">
-                                                <span>118</span><br/>
-                                                <span class="my-0 text-muted small">+10%</span>
-                                            </div>
-                                            <div class="col-6 col-xl-3 my-3">
-                                                <span class="mb-0">Chrome</span>
-                                                <div class="progress my-2" style="height: 4px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 36%"
-                                                         aria-valuenow="36" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-xl-3 my-3 text-right">
-                                                <span>1008</span><br/>
-                                                <span class="my-0 text-muted small">+36%</span>
-                                            </div>
-                                            <div class="col-6 col-xl-3 my-3">
-                                                <span class="mb-0">Opera</span>
-                                                <div class="progress my-2" style="height: 4px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 85%"
-                                                         aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-xl-3 my-3 text-right">
-                                                <span>67</span><br/>
-                                                <span class="my-0 text-muted small">+1.6%</span>
-                                            </div>
-                                            <div class="col-6 col-xl-3 my-3">
-                                                <span class="mb-0">Edge</span>
-                                                <div class="progress my-2" style="height: 4px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 85%"
-                                                         aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-xl-3 my-3 text-right">
-                                                <span>186</span><br/>
-                                                <span class="my-0 text-muted small">+118%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- .card-body -->
-                            </div> <!-- .card -->
-                        </div> <!-- .col -->
+                    <div class="row pr-3 pl-3">
+                        <table class="table table-borderless table-striped ">
+                            <thead>
+                            <tr role="row">
+                                <th></th>
+                                <th>Query</th>
+                                <th>API Value</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="col">1331</th>
+                                <td>Average Transaction Size (1000 Blocks)</td>
+                                <td>{{$avgtxsize}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">1156</th>
+                                <td>Average Transaction Value (1000 Default)</td>
+                                <td>{{$avgtxvalue}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">1038</th>
+                                <td>Average Transaction Number (100 Default)</td>
+                                <td>{{$avgtxnumber}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">1227</th>
+                                <td>Latest Hash of the latest block</td>
+                                <td>{{$latesthash}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">1427</th>
+                                <td>Hashes To Win needed to solve a block</td>
+                                <td>{{$hashestowin}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">1027</th>
+                                <td>Block Height | Current Block Height in the longest chain</td>
+                                <td>{{$blockcount}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">1229</th>
+                                <td>Current Difficulty target as a decimal number</td>
+                                <td>{{$difficulty}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">1289</th>
+                                <td>Interval</td>
+                                <td>{{$interval}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">6227</th>
+                                <td>Total Bitcoins in Circulation</td>
+                                <td>{{$totalbc}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">7827</th>
+                                <td>ETA</td>
+                                <td>{{$eta}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">1787</th>
+                                <td>Probability</td>
+                                <td>{{$probability}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <div class="col-12">
@@ -222,10 +108,9 @@
                                 <div class="card shadow">
                                     <div class="card-body">
                                         <p class="card-title"><strong>Unconfirmed Transactions</strong></p>
-                                        <p class="card-text">With supporting text below as a natural lead-in to
-                                            additional content.</p>
+                                        <p class="card-text">These are the unconfirmed transactions in the network. They either had no resources to finish a block or the nodes didn't agree that these transactions were legit</p>
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn mb-2 btn-secondary" data-toggle="modal"
+                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
                                                 data-target=".modal-full">View
                                         </button>
                                         <!-- Modal -->
@@ -250,10 +135,9 @@
                                 <div class="card shadow">
                                     <div class="card-body">
                                         <p class="card-title"><strong>Latest Block</strong></p>
-                                        <p class="card-text">With supporting text below as a natural lead-in to
-                                            additional content.</p>
+                                        <p class="card-text">This is the latest block that has been created in the network. You will have to refresh the page to view the next recent block</p>
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn mb-2 btn-secondary" data-toggle="modal"
+                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
                                                 data-target=".modal-full">View
                                         </button>
                                         <!-- Modal -->
@@ -278,9 +162,8 @@
                                 <div class="card shadow">
                                     <div class="card-body">
                                         <p class="card-title"><strong>Stats</strong></p>
-                                        <p class="card-text">With supporting text below as a natural lead-in to
-                                            additional content.</p>
-                                        <button type="button" class="btn mb-2 btn-secondary" data-toggle="modal"
+                                        <p class="card-text">View the data behind Blockchain's stats. This method can be used to get and manipulate data behind Blockchain.com's stats..</p>
+                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
                                                 data-target=".modal-full">View
                                         </button>
                                         <div class="modal fade modal-full" tabindex="-1" role="dialog"

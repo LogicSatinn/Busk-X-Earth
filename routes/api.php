@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard', 'App\Http\Controllers\HomeController@index');
-//    ->middleware(['auth'])->name('dashboard');
 
 Route::get('/diff', 'App\Http\Controllers\HomeController@index');
 
