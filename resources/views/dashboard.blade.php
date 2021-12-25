@@ -33,6 +33,194 @@
                             </form>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow bg-primary text-white border-0">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-3 text-center">
+                          <span class="circle circle-sm bg-primary-light">
+                            <i class="fe fe-16 fe-shopping-bag text-white mb-0"></i>
+                          </span>
+                                        </div>
+                                        <div class="col pr-0">
+                                            <p class="small text-muted mb-0">Monthly Sales</p>
+                                            <span class="h3 mb-0 text-white">$1250</span>
+                                            <span class="small text-muted">+5.5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-3 text-center">
+                          <span class="circle circle-sm bg-primary">
+                            <i class="fe fe-16 fe-shopping-cart text-white mb-0"></i>
+                          </span>
+                                        </div>
+                                        <div class="col pr-0">
+                                            <p class="small text-muted mb-0">Orders</p>
+                                            <span class="h3 mb-0">1,869</span>
+                                            <span class="small text-success">+16.5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-3 text-center">
+                          <span class="circle circle-sm bg-primary">
+                            <i class="fe fe-16 fe-filter text-white mb-0"></i>
+                          </span>
+                                        </div>
+                                        <div class="col">
+                                            <p class="small text-muted mb-0">Conversion</p>
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col-auto">
+                                                    <span class="h3 mr-2 mb-0"> 86.6% </span>
+                                                </div>
+                                                <div class="col-md-12 col-lg">
+                                                    <div class="progress progress-sm mt-2" style="height:3px">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-3 text-center">
+                          <span class="circle circle-sm bg-primary">
+                            <i class="fe fe-16 fe-activity text-white mb-0"></i>
+                          </span>
+                                        </div>
+                                        <div class="col">
+                                            <p class="small text-muted mb-0">AVG Orders</p>
+                                            <span class="h3 mb-0">$80</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end section -->
+
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow">
+                                    <div class="card-body">
+                                        <p class="card-title"><strong>Unconfirmed Transactions</strong></p>
+
+                                        <div class="chart-box mb-3" style="min-height:180px;">
+                                            <div id="customAngle"></div>
+                                        </div>
+
+                                        <p class="card-text">These are the unconfirmed transactions in the network. They
+                                            either had no resources to finish a block or the nodes didn't agree that
+                                            these transactions were legit</p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
+                                                data-target=".modal-full">View
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
+                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
+                                                    aria-hidden="true">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body text-center">
+                                                        <p>{{$unconfirmedTransactions}} </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- small modal -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow">
+                                    <div class="card-body">
+                                        <p class="card-title"><strong>Latest Block</strong></p>
+
+                                        <div class="chart-widget">
+                                            <div id="gradientRadial"></div>
+                                        </div>
+
+                                        <p class="card-text">This is the latest block that has been created in the
+                                            network. All blocks are in the network but this method displays the most recent. You should refresh the page to view the next recent block.</p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
+                                                data-target=".modal-full">View
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
+                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
+                                                    aria-hidden="true">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body text-center">
+                                                        <p>{{$latestBlock}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- small modal -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow">
+                                    <div class="card-body">
+                                        <p class="card-title"><strong>Stats</strong></p>
+
+                                        <div class="chart-box mt-3 mb-5">
+                                            <div id="radarChartWidget"></div>
+                                        </div>
+
+                                        <p class="card-text">View the data behind Blockchain's stats. This method can be
+                                            used to get and manipulate data behind Blockchain.com's stats..</p>
+                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
+                                                data-target=".modal-full">View
+                                        </button>
+                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
+                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
+                                                    aria-hidden="true">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body text-center">
+                                                        <p> {{$stats}} </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- small modal -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="row pr-3 pl-3">
                         <table class="table table-borderless table-striped ">
                             <thead>
@@ -102,89 +290,6 @@
                         </table>
                     </div>
 
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Unconfirmed Transactions</strong></p>
-                                        <p class="card-text">These are the unconfirmed transactions in the network. They either had no resources to finish a block or the nodes didn't agree that these transactions were legit</p>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <!-- Modal -->
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p>{{$unconfirmedTransactions}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Latest Block</strong></p>
-                                        <p class="card-text">This is the latest block that has been created in the network. You will have to refresh the page to view the next recent block</p>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <!-- Modal -->
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p>{{$latestBlock}}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Stats</strong></p>
-                                        <p class="card-text">View the data behind Blockchain's stats. This method can be used to get and manipulate data behind Blockchain.com's stats..</p>
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p> {{$stats}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div> <!-- .col-12 -->
             </div> <!-- .row -->
