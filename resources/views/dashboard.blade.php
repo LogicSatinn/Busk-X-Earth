@@ -41,13 +41,13 @@
                                     <div class="row align-items-center">
                                         <div class="col-3 text-center">
                           <span class="circle circle-sm bg-primary-light">
-                            <i class="fe fe-16 fe-shopping-bag text-white mb-0"></i>
+                            <i class="fe fe-16 fe-bold text-white mb-0"></i>
                           </span>
                                         </div>
                                         <div class="col pr-0">
-                                            <p class="small text-muted mb-0">Monthly Sales</p>
-                                            <span class="h3 mb-0 text-white">$1250</span>
-                                            <span class="small text-muted">+5.5%</span>
+                                            <p class="small text-muted mb-0">Bitcoin</p>
+                                            <span class="h3 mb-0 text-white">$51,537.33</span>
+                                            <span class="small text-muted">+15.5%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -59,13 +59,13 @@
                                     <div class="row align-items-center">
                                         <div class="col-3 text-center">
                           <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-shopping-cart text-white mb-0"></i>
+                            <i class="fe fe-16 fe-compass text-white mb-0"></i>
                           </span>
                                         </div>
                                         <div class="col pr-0">
-                                            <p class="small text-muted mb-0">Orders</p>
-                                            <span class="h3 mb-0">1,869</span>
-                                            <span class="small text-success">+16.5%</span>
+                                            <p class="small text-muted mb-0">Ether</p>
+                                            <span class="h3 mb-0">$4,091.20</span>
+                                            <span class="small text-success">+0.11%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -77,11 +77,11 @@
                                     <div class="row align-items-center">
                                         <div class="col-3 text-center">
                           <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-filter text-white mb-0"></i>
+                            <i class="fe fe-16 fe-check-circle text-white mb-0"></i>
                           </span>
                                         </div>
                                         <div class="col">
-                                            <p class="small text-muted mb-0">Conversion</p>
+                                            <p class="small text-muted mb-0">Confirmed Transactions</p>
                                             <div class="row align-items-center no-gutters">
                                                 <div class="col-auto">
                                                     <span class="h3 mr-2 mb-0"> 86.6% </span>
@@ -103,12 +103,12 @@
                                     <div class="row align-items-center">
                                         <div class="col-3 text-center">
                           <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-activity text-white mb-0"></i>
+                            <i class="fe fe-16 fe-dollar-sign text-white mb-0"></i>
                           </span>
                                         </div>
                                         <div class="col">
-                                            <p class="small text-muted mb-0">AVG Orders</p>
-                                            <span class="h3 mb-0">$80</span>
+                                            <p class="small text-muted mb-0">BitcoinCash</p>
+                                            <span class="h3 mb-0">$471.55</span>
                                         </div>
                                     </div>
                                 </div>
@@ -116,6 +116,9 @@
                         </div>
                     </div> <!-- end section -->
 
+                    <div class="my-4">
+                        <div id="lineChart"></div>
+                    </div>
 
                     <div class="col-12">
                         <div class="row">
@@ -191,8 +194,8 @@
                                     <div class="card-body">
                                         <p class="card-title"><strong>Stats</strong></p>
 
-                                        <div class="chart-box mt-3 mb-5">
-                                            <div id="radarChartWidget"></div>
+                                        <div class="chart-widget mt-3 mb-5">
+                                            <div id="columnChartWidget" width="300" height="200"></div>
                                         </div>
 
                                         <p class="card-text">View the data behind Blockchain's stats. This method can be
@@ -220,76 +223,80 @@
                         </div>
                     </div>
 
-
-                    <div class="row pr-3 pl-3">
-                        <table class="table table-borderless table-striped ">
-                            <thead>
-                            <tr role="row">
-                                <th></th>
-                                <th>Query</th>
-                                <th>API Value</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="col">1331</th>
-                                <td>Average Transaction Size (1000 Blocks)</td>
-                                <td>{{$avgtxsize}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1156</th>
-                                <td>Average Transaction Value (1000 Default)</td>
-                                <td>{{$avgtxvalue}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1038</th>
-                                <td>Average Transaction Number (100 Default)</td>
-                                <td>{{$avgtxnumber}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1227</th>
-                                <td>Latest Hash of the latest block</td>
-                                <td>{{$latesthash}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1427</th>
-                                <td>Hashes To Win needed to solve a block</td>
-                                <td>{{$hashestowin}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1027</th>
-                                <td>Block Height | Current Block Height in the longest chain</td>
-                                <td>{{$blockcount}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1229</th>
-                                <td>Current Difficulty target as a decimal number</td>
-                                <td>{{$difficulty}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1289</th>
-                                <td>Interval</td>
-                                <td>{{$interval}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">6227</th>
-                                <td>Total Bitcoins in Circulation</td>
-                                <td>{{$totalbc}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">7827</th>
-                                <td>ETA</td>
-                                <td>{{$eta}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1787</th>
-                                <td>Probability</td>
-                                <td>{{$probability}}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                    <div class="col-12 my-4">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Simple Query API</h5>
+                                <p class="card-text">Simple plain text API for querying blockchain data like hash-rate, difficulty, block height and more.</p>
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Query</th>
+                                        <th>API</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="col">1331</th>
+                                        <td>Average Transaction Size (1000 Blocks)</td>
+                                        <td>{{$avgtxsize}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1156</th>
+                                        <td>Average Transaction Value (1000 Default)</td>
+                                        <td>{{$avgtxvalue}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1038</th>
+                                        <td>Average Transaction Number (100 Default)</td>
+                                        <td>{{$avgtxnumber}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1227</th>
+                                        <td>Latest Hash of the latest block</td>
+                                        <td>{{$latesthash}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1427</th>
+                                        <td>Hashes To Win needed to solve a block</td>
+                                        <td>{{$hashestowin}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1027</th>
+                                        <td>Block Height | Current Block Height in the longest chain</td>
+                                        <td>{{$blockcount}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1229</th>
+                                        <td>Current Difficulty target as a decimal number</td>
+                                        <td>{{$difficulty}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1289</th>
+                                        <td>Interval</td>
+                                        <td>{{$interval}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">6227</th>
+                                        <td>Total Bitcoins in Circulation</td>
+                                        <td>{{$totalbc}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">7827</th>
+                                        <td>ETA</td>
+                                        <td>{{$eta}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1787</th>
+                                        <td>Probability</td>
+                                        <td>{{$probability}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> <!-- simple table -->
 
                 </div> <!-- .col-12 -->
             </div> <!-- .row -->
