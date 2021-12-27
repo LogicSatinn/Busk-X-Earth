@@ -25,6 +25,30 @@
                         <span class="sr-only"></span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/api/l2')}}">
+                        <span class="ml-lg-2">L2 Order Book</span>
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/api/l3')}}">
+                        <span class="ml-lg-2">L3 Order Book</span>
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/api/tickers')}}">
+                        <span class="ml-lg-2">Tickers</span>
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/api/symbols')}}">
+                        <span class="ml-lg-2">Symbols</span>
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
                 {{--                    <li class="nav-item dropdown">--}}
                 {{--                        <a href="#" id="ui-elementsDropdown" class="dropdown-toggle nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
                 {{--                            <span class="ml-lg-2">UI elements</span>--}}
