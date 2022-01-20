@@ -151,12 +151,12 @@ var barChart, barChartoptions = {
 barChartCtn && (barChart = new ApexCharts(barChartCtn, barChartoptions)).render();
 var lineChart, lineChartoptions = {
     series: [{
-        name: "Page views",
+        name: "Bitcoin",
         data: [31, 28, 30, 51, 42, 109, 100, 31, 40, 28, 31, 58, 30, 51, 42, 109, 100, 116]
     }, {
-        name: "Visitors",
+        name: "Ethereum",
         data: [11, 45, 20, 32, 34, 52, 41, 11, 32, 45, 11, 75, 20, 32, 34, 52, 41, 81]
-    }, {name: "Orders", data: [5, 25, 9, 14, 14, 32, 21, 5, 12, 25, 5, 55, 9, 14, 14, 32, 21, 65]}],
+    }, {name: "Litecoin", data: [5, 25, 9, 14, 14, 32, 21, 5, 12, 25, 5, 55, 9, 14, 14, 32, 21, 65]}],
     chart: {height: 350, type: "line", background: !1, zoom: {enabled: !1}, toolbar: {show: !1}},
     theme: {mode: colors.chartTheme},
     stroke: {show: !0, curve: "smooth", lineCap: "round", colors: chartColors, width: [3, 2, 3], dashArray: [0, 0, 0]},

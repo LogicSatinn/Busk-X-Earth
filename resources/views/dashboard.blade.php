@@ -34,393 +34,219 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow bg-primary text-white border-0">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary-light">
-                            <i class="fe fe-16 fe-shopping-bag text-white mb-0"></i>
-                          </span>
-                                        </div>
-                                        <div class="col pr-0">
-                                            <p class="small text-muted mb-0">Monthly Sales</p>
-                                            <span class="h3 mb-0 text-white">$1250</span>
-                                            <span class="small text-muted">+5.5%</span>
-                                        </div>
+
+                    <div class="card shadow my-4">
+                        <div class="card-body">
+                            <div class="row align-items-center my-4">
+                                <div class="col-md-4">
+                                    <div class="mx-4">
+                                        <strong class="mb-0 text-uppercase text-muted">BitCoin</strong><br/>
+                                        <h3>Market Price</h3>
+                                        <p class="text-muted">
+                                            The market price is how much you can sell 1 Bitcoin (BTC) for. The supply of
+                                            BTC is limited and pre-defined in the Bitcoin protocol. This means that the
+                                            price is sensitive to shifts in both supply and demand. In total, 21
+                                            Millions BTC can be mined and the Total Circulating Bitcoin chart displays
+                                            how many of them have already been found.</p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
                                     <div class="row align-items-center">
-                                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-shopping-cart text-white mb-0"></i>
-                          </span>
+                                        <div class="col-6">
+                                            <div class="p-4">
+                                                <p class="small text-uppercase text-muted mb-0">Notes</p>
+                                                <p class="small mb-0">
+                                                    <span class="text-muted ml-1">The smallest amount of BTC that somebody can own is 1 Satoshi, and there are 100,000,000 Satoshi in 1 BTC. This means that it is possible to buy and sell fractions of a Bitcoin.</span>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="col pr-0">
-                                            <p class="small text-muted mb-0">Orders</p>
-                                            <span class="h3 mb-0">1,869</span>
-                                            <span class="small text-success">+16.5%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-filter text-white mb-0"></i>
-                          </span>
-                                        </div>
-                                        <div class="col">
-                                            <p class="small text-muted mb-0">Conversion</p>
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col-auto">
-                                                    <span class="h3 mr-2 mb-0"> 86.6% </span>
-                                                </div>
-                                                <div class="col-md-12 col-lg">
-                                                    <div class="progress progress-sm mt-2" style="height:3px">
-                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
+                                        <div class="col-6">
+                                            <div class="p-4">
+                                                <p class="small text-uppercase text-muted mb-0">Methodology</p>
+                                                <p class="small mb-0">
+                                                    <span class="text-muted ml-1">The market price is a consolidation of prices from crypto exchanges market data.</span>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-activity text-white mb-0"></i>
-                          </span>
-                                        </div>
-                                        <div class="col">
-                                            <p class="small text-muted mb-0">AVG Orders</p>
-                                            <span class="h3 mb-0">$80</span>
-                                        </div>
+                                <div class="col-md-8">
+                                    <div class="mr-4">
+                                        <div id="priceSpark"></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end section -->
+                                </div> <!-- .col-md-8 -->
+                            </div> <!-- end section -->
+                        </div> <!-- .card-body -->
+                    </div> <!-- .card -->
 
-
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Unconfirmed Transactions</strong></p>
-
-                                        <div class="chart-box mb-3" style="min-height:180px;">
-                                            <div id="customAngle"></div>
-                                        </div>
-
-                                        <p class="card-text">These are the unconfirmed transactions in the network. They
-                                            either had no resources to finish a block or the nodes didn't agree that
-                                            these transactions were legit</p>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <!-- Modal -->
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p>{{$unconfirmedTransactions}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Latest Block</strong></p>
-
-                                        <div class="chart-widget">
-                                            <div id="gradientRadial"></div>
-                                        </div>
-
-                                        <p class="card-text">This is the latest block that has been created in the
-                                            network. All blocks are in the network but this method displays the most recent. You should refresh the page to view the next recent block.</p>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <!-- Modal -->
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p>{{$latestBlock}}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Stats</strong></p>
-
-                                        <div class="chart-box mt-3 mb-5">
-                                            <div id="radarChartWidget"></div>
-                                        </div>
-
-                                        <p class="card-text">View the data behind Blockchain's stats. This method can be
-                                            used to get and manipulate data behind Blockchain.com's stats..</p>
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p> {{$stats}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="my-5">
+                        <h1 class="text-center"> Return On Investment of Crypto-Coins</h1>
+                        <div id="mychart"></div>
                     </div>
 
+                    <div id="myheatmap"></div>
 
-                    <div class="row pr-3 pl-3">
-                        <table class="table table-borderless table-striped ">
-                            <thead>
-                            <tr role="row">
-                                <th></th>
-                                <th>Query</th>
-                                <th>API Value</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="col">1331</th>
-                                <td>Average Transaction Size (1000 Blocks)</td>
-                                <td>{{$avgtxsize}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1156</th>
-                                <td>Average Transaction Value (1000 Default)</td>
-                                <td>{{$avgtxvalue}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1038</th>
-                                <td>Average Transaction Number (100 Default)</td>
-                                <td>{{$avgtxnumber}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1227</th>
-                                <td>Latest Hash of the latest block</td>
-                                <td>{{$latesthash}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1427</th>
-                                <td>Hashes To Win needed to solve a block</td>
-                                <td>{{$hashestowin}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1027</th>
-                                <td>Block Height | Current Block Height in the longest chain</td>
-                                <td>{{$blockcount}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1229</th>
-                                <td>Current Difficulty target as a decimal number</td>
-                                <td>{{$difficulty}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1289</th>
-                                <td>Interval</td>
-                                <td>{{$interval}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">6227</th>
-                                <td>Total Bitcoins in Circulation</td>
-                                <td>{{$totalbc}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">7827</th>
-                                <td>ETA</td>
-                                <td>{{$eta}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">1787</th>
-                                <td>Probability</td>
-                                <td>{{$probability}}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
 
+                    <div class="card shadow my-4">
+                        <div class="card-body">
+                            <div class="row align-items-center my-4">
+                                <div class="col-md-4">
+                                    <div class="mx-4">
+                                        <strong class="mb-0 text-uppercase text-muted">BlockChain</strong><br/>
+                                        <h3>Confirmed Transactions Per
+                                            Day</h3>
+                                        <p class="text-muted">
+                                            The number of daily confirmed transactions highlights the value of the
+                                            Bitcoin network as a way to securely transfer funds without a third
+                                            part.</p>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-6">
+                                            <div class="p-4">
+                                                <p class="small text-uppercase text-muted mb-0">Notes</p>
+                                                <p class="small mb-0">
+                                                    <span class="text-muted ml-1">Transactions are accounted for only once they are included in a block. During times of peak mempool congestion, transactions with lower fees are likely to be confirmed after a few hours or even days in rare cases. While this graph is a suitable medium and long term indicator, the Mempool Size (Bytes) and Mempool Transaction Count charts are more suitable for short term network activity.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="p-4">
+                                                <p class="small text-uppercase text-muted mb-0">Methodology</p>
+                                                <p class="small mb-0">
+                                                    <span class="text-muted ml-1">Transactions from confirmed blocks are simply summed up to obtain daily numbers.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="mr-4">
+                                        <div id="container"></div>
+                                    </div>
+                                </div> <!-- .col-md-8 -->
+                            </div> <!-- end section -->
+                        </div> <!-- .card-body -->
+                    </div> <!-- .card -->
 
                 </div> <!-- .col-12 -->
             </div> <!-- .row -->
         </div> <!-- .container-fluid -->
-        <div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="list-group list-group-flush my-n3">
-                            <div class="list-group-item bg-transparent">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <span class="fe fe-box fe-24"></span>
-                                    </div>
-                                    <div class="col">
-                                        <small><strong>Package has uploaded successfull</strong></small>
-                                        <div class="my-0 text-muted small">Package is zipped and uploaded</div>
-                                        <small class="badge badge-pill badge-light text-muted">1m ago</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-group-item bg-transparent">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <span class="fe fe-download fe-24"></span>
-                                    </div>
-                                    <div class="col">
-                                        <small><strong>Widgets are updated successfull</strong></small>
-                                        <div class="my-0 text-muted small">Just create new layout Index, form, table
-                                        </div>
-                                        <small class="badge badge-pill badge-light text-muted">2m ago</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-group-item bg-transparent">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <span class="fe fe-inbox fe-24"></span>
-                                    </div>
-                                    <div class="col">
-                                        <small><strong>Notifications have been sent</strong></small>
-                                        <div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
-                                        <small class="badge badge-pill badge-light text-muted">30m ago</small>
-                                    </div>
-                                </div> <!-- / .row -->
-                            </div>
-                            <div class="list-group-item bg-transparent">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <span class="fe fe-link fe-24"></span>
-                                    </div>
-                                    <div class="col">
-                                        <small><strong>Link was attached to menu</strong></small>
-                                        <div class="my-0 text-muted small">New layout has been attached to the menu
-                                        </div>
-                                        <small class="badge badge-pill badge-light text-muted">1h ago</small>
-                                    </div>
-                                </div>
-                            </div> <!-- / .row -->
-                        </div> <!-- / .list-group -->
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Clear All
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade modal-shortcut modal-slide" tabindex="-1" role="dialog"
-             aria-labelledby="defaultModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="defaultModalLabel">Shortcuts</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body px-5">
-                        <div class="row align-items-center">
-                            <div class="col-6 text-center">
-                                <div class="squircle bg-success justify-content-center">
-                                    <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
-                                </div>
-                                <p>Control area</p>
-                            </div>
-                            <div class="col-6 text-center">
-                                <div class="squircle bg-primary justify-content-center">
-                                    <i class="fe fe-activity fe-32 align-self-center text-white"></i>
-                                </div>
-                                <p>Activity</p>
-                            </div>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-6 text-center">
-                                <div class="squircle bg-primary justify-content-center">
-                                    <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
-                                </div>
-                                <p>Droplet</p>
-                            </div>
-                            <div class="col-6 text-center">
-                                <div class="squircle bg-primary justify-content-center">
-                                    <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
-                                </div>
-                                <p>Upload</p>
-                            </div>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-6 text-center">
-                                <div class="squircle bg-primary justify-content-center">
-                                    <i class="fe fe-users fe-32 align-self-center text-white"></i>
-                                </div>
-                                <p>Users</p>
-                            </div>
-                            <div class="col-6 text-center">
-                                <div class="squircle bg-primary justify-content-center">
-                                    <i class="fe fe-settings fe-32 align-self-center text-white"></i>
-                                </div>
-                                <p>Settings</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main> <!-- main -->
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/cryptocharts"></script>
+
+    <script>
+        CryptoCharts.roiComparison({
+            chart_id: "mychart",
+            cryptocompare_tickers: ["BTC", "ETH"],
+            iconomi_tickers: ["BLX", "CAR"],
+            last_days: 90,
+            options: {
+                colors: ["#24aa91", "#EF1273", "#110973", "#000000"],
+                title: true,
+                chart: {
+                    type: 'line'
+                }
+            }
+        });
+    </script>
+
+    <script>
+        CryptoCharts.priceHistory({
+            chart_id: "priceSpark",
+            cryptocompare_tickers: ["BTC"],
+            last_days: 30,
+            axes: true,
+            loading_indicator: true,
+            options: {
+                colors: ["#f9d4d5"],
+                title: true
+            }
+        });
+    </script>
+
+    <script>
+        CryptoCharts.priceHeatmap({
+            chart_id: "myheatmap",
+            cryptocompare_tickers: ["BTC"],
+            last_days: 90,
+            loading_indicator: true,
+            options: {
+                colors: ["blue", "yellow", "#000000", "#123456"],
+                title: true
+            }
+        });
+    </script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdn.jsdelivr.net/canvg/1.4.0/rgbcolor.js"></script>
+
+    <script>
+        var nOfTransactions = {!! $nOfTransactions !!};
+
+
+        Highcharts.chart('container', {
+
+            title: {
+                text: 'Confirmed Transactions Per Day.'
+            },
+
+            subtitle: {
+                text: 'The total number of confirmed transactions per day.'
+            },
+
+            colors: ['#3832bd'],
+
+            yAxis: {
+                title: {
+                    text: 'Confirmed Transactions'
+                }
+            },
+
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Epoch Timestamps'
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 2010
+                }
+            },
+
+            series: [{
+                name: 'Confirmed Transactions Per Day',
+                data: JSON.parse(JSON.stringify(nOfTransactions)),
+                colorByPoint: true
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+    </script>
 @endsection
