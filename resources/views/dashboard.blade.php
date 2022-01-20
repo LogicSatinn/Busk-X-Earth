@@ -53,194 +53,158 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow bg-primary text-white border-0">
-                                <div class="card-body">
+{{--                    <div class="row">--}}
+{{--                        <div class="col-md-6 col-xl-3 mb-4">--}}
+{{--                            <div class="card shadow bg-primary text-white border-0">--}}
+{{--                                <div class="card-body">--}}
+{{--                                    <div class="row align-items-center">--}}
+{{--                                        <div class="col-3 text-center">--}}
+{{--                          <span class="circle circle-sm bg-primary-light">--}}
+{{--                            <i class="fe fe-16 fe-bold text-white mb-0"></i>--}}
+{{--                          </span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col pr-0">--}}
+{{--                                            <p class="small text-muted mb-0">Bitcoin</p>--}}
+{{--                                            <span class="h3 mb-0 text-white">$51,537.33</span>--}}
+{{--                                            <span class="small text-muted">+15.5%</span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 col-xl-3 mb-4">--}}
+{{--                            <div class="card shadow border-0">--}}
+{{--                                <div class="card-body">--}}
+{{--                                    <div class="row align-items-center">--}}
+{{--                                        <div class="col-3 text-center">--}}
+{{--                          <span class="circle circle-sm bg-primary">--}}
+{{--                            <i class="fe fe-16 fe-compass text-white mb-0"></i>--}}
+{{--                          </span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col pr-0">--}}
+{{--                                            <p class="small text-muted mb-0">Ether</p>--}}
+{{--                                            <span class="h3 mb-0">$4,091.20</span>--}}
+{{--                                            <span class="small text-success">+0.11%</span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 col-xl-3 mb-4">--}}
+{{--                            <div class="card shadow border-0">--}}
+{{--                                <div class="card-body">--}}
+{{--                                    <div class="row align-items-center">--}}
+{{--                                        <div class="col-3 text-center">--}}
+{{--                          <span class="circle circle-sm bg-primary">--}}
+{{--                            <i class="fe fe-16 fe-check-circle text-white mb-0"></i>--}}
+{{--                          </span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col">--}}
+{{--                                            <p class="small text-muted mb-0">Confirmed Transactions</p>--}}
+{{--                                            <div class="row align-items-center no-gutters">--}}
+{{--                                                <div class="col-auto">--}}
+{{--                                                    <span class="h3 mr-2 mb-0"> 86.6% </span>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="col-md-12 col-lg">--}}
+{{--                                                    <div class="progress progress-sm mt-2" style="height:3px">--}}
+{{--                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 col-xl-3 mb-4">--}}
+{{--                            <div class="card shadow border-0">--}}
+{{--                                <div class="card-body">--}}
+{{--                                    <div class="row align-items-center">--}}
+{{--                                        <div class="col-3 text-center">--}}
+{{--                          <span class="circle circle-sm bg-primary">--}}
+{{--                            <i class="fe fe-16 fe-dollar-sign text-white mb-0"></i>--}}
+{{--                          </span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col">--}}
+{{--                                            <p class="small text-muted mb-0">BitcoinCash</p>--}}
+{{--                                            <span class="h3 mb-0">$471.55</span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div> <!-- end section -->--}}
+
+
+                    <div class="card shadow my-4">
+                        <div class="card-body">
+                            <div class="row align-items-center my-4">
+                                <div class="col-md-4">
+                                    <div class="mx-4">
+                                        <strong class="mb-0 text-uppercase text-muted">Earning</strong><br />
+                                        <h3>$2,562.30</h3>
+                                        <p class="text-muted">Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...</p>
+                                    </div>
                                     <div class="row align-items-center">
-                                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary-light">
-                            <i class="fe fe-16 fe-bold text-white mb-0"></i>
-                          </span>
+                                        <div class="col-6">
+                                            <div class="p-4">
+                                                <p class="small text-uppercase text-muted mb-0">Sales</p>
+                                                <span class="h2 mb-0">$1.2K</span>
+                                                <p class="small mb-0">
+                                                    <span class="fe fe-arrow-up text-success fe-12"></span>
+                                                    <span class="text-muted ml-1">+1.5%</span>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="col pr-0">
-                                            <p class="small text-muted mb-0">Bitcoin</p>
-                                            <span class="h3 mb-0 text-white">$51,537.33</span>
-                                            <span class="small text-muted">+15.5%</span>
+                                        <div class="col-6">
+                                            <div class="p-4">
+                                                <p class="small text-uppercase text-muted mb-0">Orders</p>
+                                                <span class="h2 mb-0">1K+</span>
+                                                <p class="small mb-0">
+                                                    <span class="fe fe-arrow-up text-success fe-12"></span>
+                                                    <span class="text-muted ml-1">+28.5%</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
                                     <div class="row align-items-center">
-                                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-compass text-white mb-0"></i>
-                          </span>
+                                        <div class="col-6">
+                                            <div class="p-4">
+                                                <p class="small text-uppercase text-muted mb-0">Visitors</p>
+                                                <span class="h2 mb-0">1626</span>
+                                                <p class="small mb-0">
+                                                    <span class="text-muted ml-1">+1.5%</span>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="col pr-0">
-                                            <p class="small text-muted mb-0">Ether</p>
-                                            <span class="h3 mb-0">$4,091.20</span>
-                                            <span class="small text-success">+0.11%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-check-circle text-white mb-0"></i>
-                          </span>
-                                        </div>
-                                        <div class="col">
-                                            <p class="small text-muted mb-0">Confirmed Transactions</p>
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col-auto">
-                                                    <span class="h3 mr-2 mb-0"> 86.6% </span>
-                                                </div>
-                                                <div class="col-md-12 col-lg">
-                                                    <div class="progress progress-sm mt-2" style="height:3px">
-                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
+                                        <div class="col-6">
+                                            <div class="p-4">
+                                                <p class="small text-uppercase text-muted mb-0">Customers</p>
+                                                <span class="h2 mb-0">186</span>
+                                                <p class="small mb-0">
+                                                    <span class="fe fe-arrow-down text-danger fe-12"></span>
+                                                    <span class="text-muted ml-1">-2.5%</span>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-0">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-3 text-center">
-                          <span class="circle circle-sm bg-primary">
-                            <i class="fe fe-16 fe-dollar-sign text-white mb-0"></i>
-                          </span>
-                                        </div>
-                                        <div class="col">
-                                            <p class="small text-muted mb-0">BitcoinCash</p>
-                                            <span class="h3 mb-0">$471.55</span>
-                                        </div>
+                                <div class="col-md-8">
+                                    <div class="mr-4">
+                                        <div id="priceSpark"></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end section -->
+                                </div> <!-- .col-md-8 -->
+                            </div> <!-- end section -->
+                        </div> <!-- .card-body -->
+                    </div> <!-- .card -->
 
-                    <div class="my-4">
-                        <div id="lineChart"></div>
+                    <div class="my-5">
+                        <h1 class="text-center"> Return On Investment of Crypto-Coins</h1>
+                        <div id="mychart"></div>
                     </div>
 
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Unconfirmed Transactions</strong></p>
+                    <div id="myheatmap"></div>
 
-                                        <div class="chart-box mb-3" style="min-height:180px;">
-                                            <div id="customAngle"></div>
-                                        </div>
-
-                                        <p class="card-text">These are the unconfirmed transactions in the network. They
-                                            either had no resources to finish a block or the nodes didn't agree that
-                                            these transactions were legit</p>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <!-- Modal -->
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p>{{$unconfirmedTransactions}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Latest Block</strong></p>
-
-                                        <div class="chart-widget">
-                                            <div id="gradientRadial"></div>
-                                        </div>
-
-                                        <p class="card-text">This is the latest block that has been created in the
-                                            network. All blocks are in the network but this method displays the most recent. You should refresh the page to view the next recent block.</p>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <!-- Modal -->
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p>{{$latestBlock}}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card shadow">
-                                    <div class="card-body">
-                                        <p class="card-title"><strong>Stats</strong></p>
-
-                                        <div class="chart-widget mt-3 mb-5">
-                                            <div id="columnChartWidget" width="300" height="200"></div>
-                                        </div>
-
-                                        <p class="card-text">View the data behind Blockchain's stats. This method can be
-                                            used to get and manipulate data behind Blockchain.com's stats..</p>
-                                        <button type="button" class="btn mb-2 btn-outline-primary" data-toggle="modal"
-                                                data-target=".modal-full">View
-                                        </button>
-                                        <div class="modal fade modal-full" tabindex="-1" role="dialog"
-                                             aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                            <button aria-label="" type="button" class="close px-2" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body text-center">
-                                                        <p> {{$stats}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- small modal -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="col-12 my-4">
                         <div class="card shadow">
@@ -449,4 +413,49 @@
             </div>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/cryptocharts"></script>
+
+    <script>
+        CryptoCharts.roiComparison({
+            chart_id: "mychart",
+            cryptocompare_tickers: ["BTC", "ETH"],
+            iconomi_tickers: ["BLX","CAR"],
+            last_days: 90,
+            options: {
+                colors: ["#24aa91","#EF1273","#110973","#000000"],
+                title: true,
+                chart: {
+                    type: 'line'
+                }
+            }
+        });
+    </script>
+
+    <script>
+        CryptoCharts.priceHistory({
+            chart_id: "priceSpark",
+            cryptocompare_tickers: ["BTC"],
+            last_days: 30,
+            axes: true,
+            loading_indicator: true,
+            options: {
+                colors: ["#f9d4d5"],
+                title: true
+            }
+        });
+    </script>
+
+    <script>
+        CryptoCharts.priceHeatmap({
+            chart_id: "myheatmap",
+            cryptocompare_tickers: ["BTC"],
+            last_days: 90,
+            loading_indicator: true,
+            options: {
+                colors: ["blue","yellow","#000000","#123456"],
+                title: true
+            }
+        });
+    </script>
 @endsection

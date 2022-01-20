@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/api/l2')}}">
+                    <a class="nav-link" href="{{url('/l2')}}">
                         <span class="ml-lg-2">L2 Order Book</span>
                         <span class="sr-only"></span>
                     </a>

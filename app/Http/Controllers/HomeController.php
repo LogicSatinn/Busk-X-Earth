@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Level2OrderBook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use function GuzzleHttp\Promise\all;
 
 class HomeController extends Controller
 {
@@ -48,4 +50,5 @@ class HomeController extends Controller
 
 
     }
+
 }

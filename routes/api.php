@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/l2', 'App\Http\Controllers\LevelOrderBookController@l2OrderBook');
+
 
 Route::get('/l3', 'App\Http\Controllers\LevelOrderBookController@l3OrderBook');
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Level2OrderBook;
 use App\Models\Level3OrderBook;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 
 class LevelOrderBookController extends Controller
@@ -15,12 +16,17 @@ class LevelOrderBookController extends Controller
 
         $response->failed();
 
-        $l2OrderBook = Level2OrderBook::create([
-            'l2orderbook' => $response
-        ]);
+//        $bids = json_encode($response['bids']);
+            $bids = $response->json('bids');
+//        $l2OrderBook = Level2OrderBook::create([
+//            'l2orderbook' => $response
+//        ]);
 
-        return $response;
-    }
+//        $rist = $l2OrderBook->l2orderbook->getBody();
+
+//        return $bids;
+        return view('levelOrderBook.l2orderbook', compact('response', 'bids'));
+   }
 
 
     public function l3OrderBook()
