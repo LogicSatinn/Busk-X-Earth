@@ -11,23 +11,33 @@
 <canvas id="myChart" style="height: 400px !important;width: 400px !important;">Your browser does not support the canvas element.</canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    var bids = <?php echo $bids ?>
+    var bids = {!! $bids !!};
     console.log(bids);
     const ctx = document.getElementById('myChart');
     const myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'scatter',
         data: {
             datasets: [{
-                data: JSON.parse(bids)
+                data: JSON.parse(JSON.stringify(bids))
             }]
         },
         options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'BlockChain Level 2 Order Book',
+            },
             parsing: {
-                xAxisKey: 'px',
-                yAxisKey: 'qty'
+                xAxisKey: 'qty',
+                yAxisKey: 'px'
+            },
+            scales: {
+                x: { // defining min and max so hiding the dataset does not change scale range
+                    min: 0,
+                    max: 4
+                },
             }
         }
-
     });
 </script>
 

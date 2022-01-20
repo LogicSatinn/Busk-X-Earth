@@ -26,28 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $difficulty = Http::acceptJson()->get('https://blockchain.info/q/getdifficulty');
-        $blockcount = Http::acceptJson()->get('https://blockchain.info/q/getblockcount');
-        $latesthash = Http::acceptJson()->get('https://blockchain.info/q/latesthash');
-        $bcperblock = Http::acceptJson()->get('https://blockchain.info/q/bcperblock');
-        $totalbc = Http::acceptJson()->get('https://blockchain.info/q/totalbc');
-        $probability = Http::acceptJson()->get('https://blockchain.info/q/probability');
-        $hashestowin = Http::acceptJson()->get('https://blockchain.info/q/hashestowin');
-        $nexttretarget = Http::acceptJson()->get('https://blockchain.info/q/nextretarget');
-        $avgtxsize = Http::acceptJson()->get('https://blockchain.info/q/avgtxsize');
-        $avgtxvalue = Http::acceptJson()->get('https://blockchain.info/q/avgtxvalue');
-        $interval = Http::acceptJson()->get('https://blockchain.info/q/interval');
-        $eta = Http::acceptJson()->get('https://blockchain.info/q/eta');
-        $avgtxnumber = Http::acceptJson()->get('https://blockchain.info/q/avgtxnumber');
+        $response = Http::acceptJson()->get('https://api.blockchain.info/charts/n-transactions?timespan=8weeks&rollingAverage=8hours&format=json');
 
+        $nOfTransactions = json_encode($response['values']);
 
-        $unconfirmedTransactions = Http::acceptJson()->get('https://blockchain.info/unconfirmed-transactions?format=json');
-        $latestBlock = Http::acceptJson()->get('https://blockchain.info/latestblock');
-        $stats = Http::acceptJson()->get('https://api.blockchain.info/stats');
-
-
-        return view('dashboard', compact('unconfirmedTransactions','latestBlock', 'stats', 'avgtxnumber', 'eta', 'interval', 'avgtxvalue', 'avgtxsize', 'nexttretarget', 'hashestowin', 'probability', 'totalbc', 'bcperblock', 'latesthash', 'blockcount', 'difficulty'));
-
+        return view('dashboard', compact( 'nOfTransactions'));
 
     }
 

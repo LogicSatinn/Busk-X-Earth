@@ -7,19 +7,17 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/', 'App\Http\Controllers\HomeController@index')
         ->name('dashboard');
 
-    Route::get('/l2', 'App\Http\Controllers\LevelOrderBookController@l2OrderBook');
-    Route::get('/l3', 'App\Http\Controllers\LevelOrderBookController@l3OrderBook');
+    Route::get('/blocks', 'App\Http\Controllers\BlockInfoController');
+    Route::get('/mining', 'App\Http\Controllers\MiningNetworkController');
 });
+
 
 Route::get('/welcome', function () {
-    $response = Http::acceptJson()->get('https://api.blockchain.com/v3/exchange/l2/BTC-USD');
+    $response = Http::acceptJson()->get('https://api.blockchain.info/charts/mempool-count?timespan=3weeks&rollingAverage=8hours&format=json');
 
-    $response->failed();
+    $nOfTransactions = json_encode($response['values']);
 
-    $bids = json_encode($response['bids']);
-
-    return view('welcome', compact('bids'));
+    return view('welcome', compact('nOfTransactions'));
 });
-
 
 require __DIR__ . '/auth.php';
