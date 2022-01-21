@@ -7,7 +7,7 @@
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
-            {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the button down below and we will email you through the email address you provided during registration. If you didn\'t receive the email, we will gladly send you another.') }}
+            {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the button down below and we will email you through the email address you provided during registration. ') }}
         </div>
 
         @if (session('status') == 'verification-link-sent')
@@ -22,7 +22,7 @@
 
                 <div>
                     <x-button>
-                        {{ __('Resend Verification Email') }}
+                        {{ __('Send Verification Email') }}
                     </x-button>
                 </div>
             </form>
