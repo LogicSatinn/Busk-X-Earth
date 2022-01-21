@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Notifications\UserEmailVerifiedNotification;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Support\Facades\Notification;
 
 class VerifyEmailController extends Controller
 {
@@ -22,6 +24,7 @@ class VerifyEmailController extends Controller
         }
 
         if ($request->user()->markEmailAsVerified()) {
+            Notification::route('mail', $request->user()->email)->notify(new UserEmailVerifiedNotification($user = $request->user()));
             event(new Verified($request->user()));
         }
 
