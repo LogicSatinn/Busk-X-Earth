@@ -59,9 +59,11 @@
 {{--                    <li class="nav-item">--}}
 {{--                        <a class="nav-link pl-3" href="#">Profile</a>--}}
 {{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link pl-3" href="#">Activities</a>--}}
-{{--                    </li>--}}
+                    @hasrole('Admin')
+                    <li class="nav-item">
+                        <a class="nav-link pl-3" href="{{route('users.index')}}">Manage Users</a>
+                    </li>
+                    @endhasrole
                     <div role="separator" class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
