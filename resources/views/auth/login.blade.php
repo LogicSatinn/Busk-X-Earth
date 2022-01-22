@@ -1,7 +1,10 @@
 <x-guest-layout>
+
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
+                <h1 class="text-center text-xl tracking-widest rounded-md font-bold uppercase text-black" style="margin-bottom: 10px;">
+                    Sign In</h1>
                                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
         </x-slot>
@@ -44,10 +47,6 @@
             </div>
 
                 <div class="flex items-center justify-end mt-4">
-
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" style="margin-right: 2.1rem;" href="{{ route('register') }}">
-                        {{ __('Create an account') }}
-                    </a>
 
                     @if (Route::has('password.request'))
                         <a class="underline text-sm text-gray-600 hover:text-gray-900"
