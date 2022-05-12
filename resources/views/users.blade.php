@@ -40,23 +40,25 @@
                             <table class="table table-borderless table-hover">
                                 <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Joining Date</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
+                                @php $i=1 @endphp
                                 @foreach($users as $user)
                                 <tbody>
                                 <tr>
+                                    <td class="mb-0 text-muted">{{ $i++ }}</td>
                                     <td>
                                         <p class="mb-0 text-muted"><strong>{{$user->name}}</strong></p>
-                                        <small class="mb-0 text-muted">{{$user->id}}</small>
                                     </td>
                                     <td>
-                                        <p class="mb-0 text-muted">{{$user->email}}</p>
+                                        <p class="mb-0 ">{{$user->email}}</p>
                                     </td>
-                                    <td class="text-muted">{{$user->created_at}}</td>
+                                    <td>{{$user->created_at}}</td>
                                     <form action="{{route('users.destroy', $user)}}" method="POST">
                                         @csrf
                                         @method('delete')
@@ -65,7 +67,7 @@
                                             <span class="text-muted sr-only">Action</span>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-right">
-                                            <button type="submit" class="dropdown-item" href="#">Delete</button>
+                                            <button type="submit" class="dropdown-item" href="#">Remove</button>
                                         </div>
                                     </td>
                                     </form>
