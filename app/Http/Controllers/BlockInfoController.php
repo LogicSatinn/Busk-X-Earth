@@ -2,40 +2,52 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\Client\Pool;
 use Illuminate\Support\Facades\Http;
 
 class BlockInfoController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): Factory|View|Application
     {
-        // TODO: Implement __invoke() method.
-        $response = Http::acceptJson()->get('https://api.blockchain.info/charts/avg-block-size?timespan=5weeks&rollingAverage=8hours&format=json');
+        $response = Http::pool(fn (Pool $pool) => [
+            $pool->as('avg-block-size')->acceptJson()->get('https://api.blockchain.info/charts/avg-block-size?timespan=5weeks&rollingAverage=8hours&format=json'),
+            $pool->as('n-transactions')->acceptJson()->get('https://api.blockchain.info/charts/n-transactions-per-block?timespan=5weeks&rollingAverage=8hours&format=json'),
+            $pool->as('median-confirmation-size')->acceptJson()->get('https://api.blockchain.info/charts/median-confirmation-time?timespan=5weeks&rollingAverage=8hours&format=json'),
+            $pool->as('difficulty')->acceptJson()->get('https://blockchain.info/q/getdifficulty'),
+            $pool->as('block-count')->acceptJson()->get('https://blockchain.info/q/getblockcount'),
+            $pool->as('latest-hash')->acceptJson()->get('https://blockchain.info/q/latesthash'),
+            $pool->as('bcper-block')->acceptJson()->get('https://blockchain.info/q/bcperblock'),
+            $pool->as('total-bc')->acceptJson()->get('https://blockchain.info/q/totalbc'),
+            $pool->as('probability')->acceptJson()->get('https://blockchain.info/q/probability'),
+            $pool->as('hashes-to-win')->acceptJson()->get('https://blockchain.info/q/hashestowin'),
+            $pool->as('next-retarget')->acceptJson()->get('https://blockchain.info/q/nextretarget'),
+            $pool->as('avg-tx-size')->acceptJson()->get('https://blockchain.info/q/avgtxsize'),
+            $pool->as('avg-tx-value')->acceptJson()->get('https://blockchain.info/q/avgtxvalue'),
+            $pool->as('interval')->acceptJson()->get('https://blockchain.info/q/interval'),
+            $pool->as('eta')->acceptJson()->get('https://blockchain.info/q/eta'),
+            $pool->as('avg-tx-number')->acceptJson()->get('https://blockchain.info/q/avgtxnumber'),
+        ]);
 
-        $responseForNTransactions = Http::acceptJson()->get('https://api.blockchain.info/charts/n-transactions-per-block?timespan=5weeks&rollingAverage=8hours&format=json');
-
-        $responseForConfirmationTime = Http::acceptJson()->get('https://api.blockchain.info/charts/median-confirmation-time?timespan=5weeks&rollingAverage=8hours&format=json');
-
-        $medianConfirmationTime = json_encode($responseForConfirmationTime['values']);
-
-        $avgBlockSize = json_encode($response['values']);
-
-        $nOfTransactions = json_encode($responseForNTransactions['values']);
-
-        $difficulty = Http::acceptJson()->get('https://blockchain.info/q/getdifficulty');
-        $blockcount = Http::acceptJson()->get('https://blockchain.info/q/getblockcount');
-        $latesthash = Http::acceptJson()->get('https://blockchain.info/q/latesthash');
-        $bcperblock = Http::acceptJson()->get('https://blockchain.info/q/bcperblock');
-        $totalbc = Http::acceptJson()->get('https://blockchain.info/q/totalbc');
-        $probability = Http::acceptJson()->get('https://blockchain.info/q/probability');
-        $hashestowin = Http::acceptJson()->get('https://blockchain.info/q/hashestowin');
-        $nexttretarget = Http::acceptJson()->get('https://blockchain.info/q/nextretarget');
-        $avgtxsize = Http::acceptJson()->get('https://blockchain.info/q/avgtxsize');
-        $avgtxvalue = Http::acceptJson()->get('https://blockchain.info/q/avgtxvalue');
-        $interval = Http::acceptJson()->get('https://blockchain.info/q/interval');
-        $eta = Http::acceptJson()->get('https://blockchain.info/q/eta');
-        $avgtxnumber = Http::acceptJson()->get('https://blockchain.info/q/avgtxnumber');
-
-        return view('blocks', compact('medianConfirmationTime','avgBlockSize', 'nOfTransactions', 'avgtxnumber', 'eta', 'interval', 'avgtxvalue', 'avgtxsize', 'nexttretarget', 'hashestowin', 'probability', 'totalbc', 'bcperblock', 'latesthash', 'blockcount', 'difficulty'));
+        return view('blocks', [
+            'difficulty' => $response['difficulty'],
+            'blockCount' => $response['block-count'],
+            'latestHash' => $response['latest-hash'],
+            'bcperBlock' => $response['bcper-block'],
+            'totalBc' => $response['total-bc'],
+            'probability' => $response['probability'],
+            'hashesToWin' => $response['hashes-to-win'],
+            'nextRetarget' => $response['next-retarget'],
+            'avgTxSize' => $response['avg-tx-size'],
+            'avgTxValue' => $response['avg-tx-value'],
+            'interval' => $response['interval'],
+            'eta' => $response['eta'],
+            'avgTxNumber' => $response['avg-tx-number'],
+            'medianConfirmationTime' => json_encode($response['median-confirmation-size']['values']),
+            'avgBlockSize' => json_encode($response['avg-block-size']['values']),
+            'nOfTransactions' => json_encode($response['n-transactions']['values']),
+        ]);
     }
 }

@@ -12,9 +12,7 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="row align-items-center mb-2">
-                        <div class="col">
-                            <h2 class="h5 page-title">Welcome, {{auth()->user()->name}} </h2>
-                        </div>
+                        <x-user-name/>
                         <div class="col-auto">
                             <form class="form-inline">
                                 <div class="form-group d-none d-lg-inline">
@@ -81,32 +79,32 @@
                                     <tr>
                                         <th scope="col">1331</th>
                                         <td>Average Transaction Size (1000 Blocks)</td>
-                                        <td>{{$avgtxsize}}</td>
+                                        <td>{{$avgTxSize}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="col">1156</th>
                                         <td>Average Transaction Value (1000 Default)</td>
-                                        <td>{{$avgtxvalue}}</td>
+                                        <td>{{$avgTxValue}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="col">1038</th>
                                         <td>Average Transaction Number (100 Default)</td>
-                                        <td>{{$avgtxnumber}}</td>
+                                        <td>{{$avgTxNumber}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="col">1227</th>
                                         <td>Latest Hash of the latest block</td>
-                                        <td>{{$latesthash}}</td>
+                                        <td>{{$latestHash}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="col">1427</th>
                                         <td>Hashes To Win needed to solve a block</td>
-                                        <td>{{$hashestowin}}</td>
+                                        <td>{{$hashesToWin}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="col">1027</th>
                                         <td>Block Height | Current Block Height in the longest chain</td>
-                                        <td>{{$blockcount}}</td>
+                                        <td>{{$blockCount}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="col">1229</th>
@@ -121,7 +119,7 @@
                                     <tr>
                                         <th scope="col">6227</th>
                                         <td>Total Bitcoins in Circulation</td>
-                                        <td>{{$totalbc}}</td>
+                                        <td>{{$totalBc}}</td>
                                     </tr>
                                     <tr>
                                         <th scope="col">7827</th>

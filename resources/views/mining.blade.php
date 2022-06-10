@@ -12,9 +12,7 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="row align-items-center mb-2">
-                        <div class="col">
-                            <h2 class="h5 page-title">Welcome, {{auth()->user()->name}} </h2>
-                        </div>
+                        <x-user-name/>
                         <div class="col-auto">
                             <form class="form-inline">
                                 <div class="form-group d-none d-lg-inline">
