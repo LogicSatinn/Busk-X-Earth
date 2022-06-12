@@ -48,7 +48,7 @@ class BlockInfoController extends Controller
             'eta' => $response['eta'],
             'avgTxNumber' => $response['avg-tx-number'],
             'avgBlockSize' => json_encode($response['avg-block-size']['values']),
-            'medianConfirmationSize' => json_encode($response['median-confirmation-time']['values']),
+            'medianConfirmationSize' => json_encode($response['median-confirmation-size']['values']),
             'nOfTransactions' => json_encode($response['n-transactions']['values']),
         ]);
     }

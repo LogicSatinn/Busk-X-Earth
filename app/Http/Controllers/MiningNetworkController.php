@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Level2OrderBook;
-use App\Models\Level3OrderBook;
 use Illuminate\Http\Client\Pool;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
