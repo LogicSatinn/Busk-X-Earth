@@ -1,3 +1,10 @@
+<script src="{{ asset('js/highcharts.js') }}"></script>
+<script src="{{ asset('js/series-label.js') }}"></script>
+<script src="{{ asset('js/exporting.js') }}"></script>
+<script src="{{ asset('js/export-data.js') }}"></script>
+<script src="{{ asset('js/accessibility.js') }}"></script>
+<script src="{{ asset('js/rgbcolor.js') }}"></script>
+
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/popper.min.js')}}"></script>
 <script src="{{asset('js/moment.min.js')}}"></script>
@@ -237,3 +244,5 @@
     gtag('js', new Date());
     gtag('config', 'UA-56159088-1');
 </script>
+
+@stack('chart_scripts')
