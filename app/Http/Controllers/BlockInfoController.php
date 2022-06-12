@@ -16,7 +16,7 @@ class BlockInfoController extends Controller
         $response = Http::pool(fn (Pool $pool) => [
             $pool->as('avg-block-size')->acceptJson()->get('https://api.blockchain.info/charts/avg-block-size?timespan=5weeks&rollingAverage=8hours&format=json'),
             $pool->as('n-transactions')->acceptJson()->get('https://api.blockchain.info/charts/n-transactions-per-block?timespan=5weeks&rollingAverage=8hours&format=json'),
-            $pool->as('median-confirmation-size')->acceptJson()->get('https://api.blockchain.info/charts/median-confirmation-time?timespan=5weeks&rollingAverage=8hours&format=json'),
+            $pool->as('median-confirmation-time')->acceptJson()->get('https://api.blockchain.info/charts/median-confirmation-time?timespan=5weeks&rollingAverage=8hours&format=json'),
             $pool->as('difficulty')->acceptJson()->get('https://blockchain.info/q/getdifficulty'),
             $pool->as('block-count')->acceptJson()->get('https://blockchain.info/q/getblockcount'),
             $pool->as('latest-hash')->acceptJson()->get('https://blockchain.info/q/latesthash'),
@@ -48,7 +48,7 @@ class BlockInfoController extends Controller
             'eta' => $response['eta'],
             'avgTxNumber' => $response['avg-tx-number'],
             'avgBlockSize' => json_encode($response['avg-block-size']['values']),
-            'medianConfirmationSize' => json_encode($response['median-confirmation-size']['values']),
+            'medianConfirmationTime' => json_encode($response['median-confirmation-time']['values']),
             'nOfTransactions' => json_encode($response['n-transactions']['values']),
         ]);
     }
